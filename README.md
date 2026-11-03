@@ -1,16 +1,23 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**flicky-official/flicky-official** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# flicky
 
-Here are some ideas to get you started:
+**real-time systems · applied AI · developer tooling**
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+`C++` · `Python` · `TypeScript` · `MQTT`
+
+</div>
+
+---
+
+### now
+- Building [**realtime-telemetry-platform**](https://github.com/flicky-official/realtime-telemetry-platform): hardware → MQTT → live HUDs
+- Shipping something larger, in stealth
+
+### selected work
+| project | what it is |
+|---|---|
+| [realtime-telemetry-platform](https://github.com/flicky-official/realtime-telemetry-platform) | Streaming pipeline with a simulator, broker and browser HUD. Runs with `docker compose up`. |
+
+### contact
+[email](mailto:flickyofficial@gmail.com)
