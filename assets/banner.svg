@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="flicky: real-time systems, applied AI, developer tooling">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#00ff9c" stroke-opacity=".07"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect y="3" width="4" height="1" fill="#000" fill-opacity=".35"/>
+    </pattern>
+    <radialGradient id="halo" cx="83%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#00ff9c" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#00ff9c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00ff9c" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#00ff9c" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#00ff9c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="type1">
+      <rect x="40" y="40" width="0" height="40">
+        <animate attributeName="width" from="0" to="150" dur="0.9s" begin="0.3s" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect width="1000" height="300" fill="#04070a"/>
+  <rect width="1000" height="300" fill="url(#grid)"/>
+  <rect width="1000" height="300" fill="url(#halo)"/>
+
+  <path d="M20 50V20H50 M950 20H980V50 M980 250V280H950 M50 280H20V250" fill="none" stroke="#00ff9c" stroke-opacity=".6" stroke-width="2"/>
+
+  <!-- reactor ring -->
+  <g transform="translate(830 150)" fill="none" stroke="#00ff9c">
+    <circle r="100" stroke-opacity=".15" stroke-width="10"/>
+    <circle r="100" stroke-width="10" stroke-dasharray="330 628" transform="rotate(135)" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="60 628;330 628;240 628;400 628;330 628" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="78" stroke-opacity=".5" stroke-dasharray="2 9">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="64" stroke-opacity=".35" stroke-dasharray="30 12 4 12">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="36s" repeatCount="indefinite"/>
+    </circle>
+    <text y="14" text-anchor="middle" font-size="40" fill="#00ff9c" stroke="none" filter="url(#glow)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">&gt;_</text>
+  </g>
+
+  <!-- text -->
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" fill="#00ff9c">
+    <text x="48" y="68" font-size="22" fill-opacity=".7" clip-path="url(#type1)">$ whoami</text>
+
+    <text x="46" y="150" font-size="84" font-weight="700" letter-spacing="10" filter="url(#glow)" opacity="0">FLICKY
+      <animate attributeName="opacity" from="0" to="1" begin="1s" dur=".7s" fill="freeze"/>
+    </text>
+
+    <text x="50" y="196" font-size="20" fill-opacity=".85" opacity="0">real-time systems · applied AI · developer tooling
+      <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur=".6s" fill="freeze"/>
+    </text>
+
+    <text x="50" y="244" font-size="18" fill-opacity=".6" opacity="0">&gt; status: building in stealth<tspan fill-opacity="1">█<animate attributeName="fill-opacity" values="1;0" dur="1s" repeatCount="indefinite" calcMode="discrete"/></tspan>
+      <animate attributeName="opacity" from="0" to="1" begin="2.2s" dur=".4s" fill="freeze"/>
+    </text>
+  </g>
+
+  <rect width="1000" height="80" y="-80" fill="url(#sweep)">
+    <animate attributeName="y" from="-80" to="300" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="1000" height="300" fill="url(#scan)"/>
+  <rect x=".5" y=".5" width="999" height="299" fill="none" stroke="#00ff9c" stroke-opacity=".25"/>
+</svg>
